@@ -52,16 +52,15 @@ body.modal-open{overflow:hidden}
     <div class="eyebrow">ARINAGE ONE</div>
     <h2 class="display" id="contactTitle">Start a conversation.</h2>
     <p class="contact-intro">Tell us what you would like to achieve. We will use your objective as the starting point.</p>
-    <form class="contact-form" id="contactForm">
+    <form class="contact-form" id="contactForm" action="https://formspree.io/f/xaenwnlj" method="POST">
       <div class="contact-field"><label for="contactName">Name</label><input id="contactName" name="name" autocomplete="name" required></div>
       <div class="contact-field"><label for="contactEmail">Email</label><input id="contactEmail" name="email" type="email" autocomplete="email" required></div>
       <div class="contact-field full"><label for="contactCompany">Company <span style="font-weight:300;color:var(--muted)">(optional)</span></label><input id="contactCompany" name="company" autocomplete="organization"></div>
       <div class="contact-field full"><label for="contactObjective">What would you like to achieve?</label><textarea id="contactObjective" name="objective" required></textarea></div>
       <div class="contact-actions">
         <button class="btn contact-send" type="submit">SEND MESSAGE →</button>
-        <span class="contact-email">or email us at <a href="mailto:office@arinage.com">office@arinage.com</a></span>
       </div>
-      <div class="contact-note" id="contactNote">This is the design preview. Message delivery will be connected after the form is approved.</div>
+      <div class="contact-note" id="contactNote">Thank you. Your message has been sent.</div>
     </form>
   </div>
 </div>
@@ -78,6 +77,6 @@ openBtn.addEventListener('click',openContact);const topContact=document.getEleme
 closeBtn.addEventListener('click',closeContact);
 modal.addEventListener('click',e=>{if(e.target===modal)closeContact()});
 document.addEventListener('keydown',e=>{if(e.key==='Escape'&&modal.classList.contains('open'))closeContact()});
-form.addEventListener('submit',e=>{e.preventDefault();note.classList.add('show')});
+form.addEventListener('submit',async e=>{e.preventDefault();const btn=form.querySelector('.contact-send');const original=btn.textContent;btn.disabled=true;btn.textContent='SENDING…';note.classList.remove('show');try{const r=await fetch(form.action,{method:'POST',body:new FormData(form),headers:{'Accept':'application/json'}});if(!r.ok)throw new Error();form.reset();note.textContent='Thank you. Your message has been sent.';note.classList.add('show')}catch(err){note.textContent='We could not send your message. Please try again.';note.classList.add('show')}finally{btn.disabled=false;btn.textContent=original}});
 </script>
 </body></html>
