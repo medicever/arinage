@@ -88,7 +88,7 @@ nav {
 
 /* ===== HERO ===== */
 .hero {
-    min-height:690px;
+    min-height:560px;
     display:flex;
     align-items:center;
     background:linear-gradient(90deg,#fff 0%,#fff 42%,rgba(255,255,255,.85) 52%,rgba(255,255,255,.08) 78%),url('images/hero-luxury.jpg') right center/cover no-repeat;
@@ -113,7 +113,7 @@ nav {
     margin:0
 }
 .hero h1 {
-    font-size:clamp(48px,5vw,92px);
+    font-size:clamp(34px,3.2vw,48px);
     max: width 600px;
     px
 }
@@ -161,7 +161,7 @@ nav {
     margin:0 auto 72px
 }
 .intro h2 {
-    font-size:64px
+    font-size:42px
 }
 .intro p {
     font-size:17px;
@@ -183,7 +183,7 @@ nav {
     border-left:1px solid var(--line)
 }
 .practice h3 {
-    font-size:45px
+    font-size:36px
 }
 .practice p {
     font-size:16px;
@@ -229,7 +229,7 @@ nav {
     margin-bottom:52px
 }
 .splithead h2 {
-    font-size:68px
+    font-size:42px
 }
 .splithead p {
     font-size:18px;
@@ -349,7 +349,7 @@ nav {
     align-items:center
 }
 .ai-layout h2 {
-    font-size:64px
+    font-size:42px
 }
 .ai-layout p {
     font-size:16px;
@@ -391,7 +391,7 @@ nav {
     padding:76px 0
 }
 .bridge h2 {
-    font-size:40px
+    font-size:34px
 }
 .bridge p {
     font-size:17px;
@@ -458,9 +458,10 @@ footer {
 
 /* ===== TABLET / MOBILE ===== */
 @media(max-width:850px) {
-    .nav {
-        display:none
-    }
+    header{height:auto;min-height:88px}
+    nav{flex-wrap:wrap;align-content:center;padding:8px 0 10px}
+    .nav{display:flex;width:100%;justify-content:space-between;gap:8px;flex-wrap:nowrap;margin-top:7px;font-size:8px;letter-spacing:.08em}
+
 
 /* ===== HERO ===== */
     .hero {
@@ -486,8 +487,7 @@ footer {
         grid-template-columns:1fr 1fr
     }
     .intro h2,.splithead h2,.ai-layout h2,.bridge h2 {
-        font-size:60
-        px
+        font-size:32px
     }
 }
 
@@ -497,7 +497,7 @@ footer {
         width:calc(100% - 30px)
     }
     .hero h1 {
-        font-size:40px
+        font-size:34px
     }
     .hero p {
         font-size:16px
