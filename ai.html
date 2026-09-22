@@ -69,13 +69,41 @@ body.modal-open{overflow:hidden}
 .ai-cta{text-align:center;padding:50px 0 54px}
 .ai-cta h2{font-size:34px;margin:9px 0 13px}
 .ai-cta p{color:var(--muted);font-size:15px;line-height:1.62;max-width:610px;margin:0 auto 21px}
-@media(max-width:800px){.ai-hero{padding:30px 0 38px}.ai-hero h1{font-size:30px}.ai-architecture h2,.ai-capabilities h2,.ai-system h2,.ai-results h2,.ai-cta h2{font-size:30px}
+
+.medicever-work{padding:54px 0 58px;background:var(--deep);color:#fff;border-bottom:1px solid rgba(255,255,255,.08)}
+.medicever-layout{display:grid;grid-template-columns:.78fr 1.22fr;gap:48px;align-items:start}
+.medicever-copy h2{font-size:44px;margin:12px 0 12px}
+.medicever-subtitle{font-size:23px;line-height:1.25;color:#b9c7cf;margin:0 0 22px}
+.medicever-rule{width:74px;height:1px;background:var(--gold);margin:0 0 20px}
+.medicever-copy>p{font-size:14px;line-height:1.72;color:#b9c7cf;margin:0 0 24px;max-width:470px}
+.medicever-tools{display:grid;gap:13px;margin:0 0 26px}
+.medicever-tool{display:grid;grid-template-columns:34px 1fr;gap:12px;align-items:start}
+.medicever-icon{width:30px;height:30px;border:1px solid rgba(184,137,45,.45);border-radius:50%;display:flex;align-items:center;justify-content:center;color:var(--gold);font-size:10px;font-weight:600}
+.medicever-tool strong{display:block;font-size:13px;font-weight:500;color:#fff;margin-bottom:2px}
+.medicever-tool span{display:block;font-size:11.5px;line-height:1.45;color:#9fb0ba}
+.medicever-actions{display:flex;align-items:center;gap:22px;flex-wrap:wrap}
+.medicever-btn{display:inline-block;text-decoration:none;color:#fff;background:var(--gold);padding:13px 20px;font-size:10px;font-weight:600;letter-spacing:.17em}
+.medicever-credit{font-size:9px;line-height:1.5;letter-spacing:.22em;color:#b9c7cf}
+.medicever-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.medicever-card{border:1px solid rgba(255,255,255,.12);background:#05243a;overflow:hidden}
+.medicever-card img{display:block;width:100%;aspect-ratio:1.75/1;object-fit:cover}
+.medicever-card-body{padding:16px 17px 18px}
+.medicever-card h3{font-size:16px;font-weight:400;margin:0 0 7px;color:#fff}
+.medicever-card p{font-size:11.5px;line-height:1.55;color:#aebdc5;margin:0}
+.medicever-impact{text-align:center;margin-top:32px;padding-top:18px;border-top:1px solid rgba(255,255,255,.10);font-size:9px;letter-spacing:.34em;color:#b9c7cf}
+
+@media(max-width:800px){
+.medicever-layout{grid-template-columns:1fr;gap:32px}
+.medicever-copy h2{font-size:30px}
+.medicever-subtitle{font-size:19px}
+.medicever-grid{grid-template-columns:1fr 1fr}
+.ai-hero{padding:30px 0 38px}.ai-hero h1{font-size:30px}.ai-architecture h2,.ai-capabilities h2,.ai-system h2,.ai-results h2,.ai-cta h2{font-size:30px}
 .ai-hero-grid,.ai-architecture-head,.ai-capabilities-head,.ai-results-grid{grid-template-columns:1fr}
 .ai-grid{grid-template-columns:1fr 1fr}
 .ai-steps{grid-template-columns:1fr}
 .ai-step+.ai-step{padding-left:0;border-left:0;border-top:1px solid #dfe4e6}
 }
-@media(max-width:560px){.ai-grid,.result-list{grid-template-columns:1fr}}
+@media(max-width:560px){.ai-grid,.result-list,.medicever-grid{grid-template-columns:1fr}.medicever-work{padding:38px 0 42px}.medicever-card img{aspect-ratio:1.65/1}}
 </style>
 </head><body>
 <header>
@@ -129,6 +157,38 @@ body.modal-open{overflow:hidden}
       <article class="ai-card"><span class="num">05</span><h3>Data & Digital<br>Infrastructure</h3><p>Data integration, knowledge systems, advanced digital platforms and scalable infrastructure designed for intelligent operations.</p></article>
       <article class="ai-card"><span class="num">06</span><h3>Healthcare<br>Intelligence</h3><p>Specialised AI solutions for clinical information, medical documents, decision support and healthcare-oriented workflows.</p></article>
     </div>
+  </div>
+</section>
+
+
+<section class="medicever-work">
+  <div class="wrap">
+    <div class="medicever-layout">
+      <div class="medicever-copy">
+        <div class="eyebrow">SELECTED WORK · HEALTHCARE AI</div>
+        <h2 class="display">MEDICEVER</h2>
+        <div class="medicever-subtitle">AI-powered health intelligence platform</div>
+        <div class="medicever-rule"></div>
+        <p>Designed and developed by ARINAGE AI, Medicever brings four AI-powered health tools into one digital platform — from pharmaceutical interaction analysis and conversational health information to test result interpretation and wearable-data analytics.</p>
+        <div class="medicever-tools">
+          <div class="medicever-tool"><div class="medicever-icon">Rx</div><div><strong>Drug Interactions Guide</strong><span>Check potential drug interactions quickly and clearly.</span></div></div>
+          <div class="medicever-tool"><div class="medicever-icon">AI</div><div><strong>AI Chat Assistant</strong><span>Get trusted answers to everyday health questions, 24/7.</span></div></div>
+          <div class="medicever-tool"><div class="medicever-icon">DOC</div><div><strong>Test Results Interpreter</strong><span>Understand medical test results in simple terms.</span></div></div>
+          <div class="medicever-tool"><div class="medicever-icon">DATA</div><div><strong>Smartband Data Analyzer</strong><span>Turn activity data into meaningful health insights.</span></div></div>
+        </div>
+        <div class="medicever-actions">
+          <a class="medicever-btn" href="https://medicever.com/" target="_blank" rel="noopener">VIEW LIVE PROJECT →</a>
+          <div class="medicever-credit">A PROJECT<br>BY ARINAGE AI</div>
+        </div>
+      </div>
+      <div class="medicever-grid">
+        <article class="medicever-card"><img src="images/medicever-drug-interactions.jpg" alt="Medicever Drug Interactions Guide"><div class="medicever-card-body"><h3>Drug Interactions Guide</h3><p>Review potential drug interactions quickly and clearly using AI-powered analysis based on pharmaceutical data.</p></div></article>
+        <article class="medicever-card"><img src="images/medicever-ai-chat.jpg" alt="Medicever AI Chat Assistant"><div class="medicever-card-body"><h3>AI Chat Assistant</h3><p>An AI medical assistant for everyday health questions, medical topics and general health information.</p></div></article>
+        <article class="medicever-card"><img src="images/medicever-test-results.jpg" alt="Medicever Test Results Interpreter"><div class="medicever-card-body"><h3>Test Results Interpreter</h3><p>Upload a medical test result and receive a clear, easy-to-understand explanation.</p></div></article>
+        <article class="medicever-card"><img src="images/medicever-smartband.jpg" alt="Medicever Smartband Data Analyzer"><div class="medicever-card-body"><h3>Smartband Data Analyzer</h3><p>Analyze fitness tracker and smartwatch data to understand activity patterns and daily metrics.</p></div></article>
+      </div>
+    </div>
+    <div class="medicever-impact">REAL PROJECTS. REAL IMPACT.</div>
   </div>
 </section>
 
